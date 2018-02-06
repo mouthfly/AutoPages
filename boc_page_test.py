@@ -7,11 +7,10 @@ class BocPageTest(unittest.TestCase):
         self.boc = BocPage()
 
     def test_find_popup(self):
-        assert self.boc.find_popup() is not None
+        assert self.boc.value == 1
     
     def tearDown(self):
-        self.boc.close()
-
+        pass
 
 if (__name__ == "__main__"):
     unittest.main()

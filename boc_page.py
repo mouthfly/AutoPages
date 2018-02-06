@@ -1,13 +1,10 @@
+from auto_page import AutoPage
 from selenium import webdriver
 
-class BocPage(object):
+class BocPage(AutoPage):
     
-    def __init__(self):
-        self.driver = webdriver.Firefox()
+    def preRun(self):
         self.driver.get("https://cmcoins.boc.cn/BOC15_CoinSeller/welcome.html")
     
-    def close(self):
-        self.driver.close()
-
-    def find_popup(self):
-        return 1
+    def run(self):
+        self.value = 1
